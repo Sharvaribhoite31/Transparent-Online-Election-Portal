@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<div id="registration-section">
+
+<h1>Registration</h1>
+
+<form id="registrationForm">
+
+<!-- ROLE -->
+<div class="input-group">
+<label for="role">Role</label>
+<input type="text" id="role" value="group" readonly>
+</div>
+
+<!-- NOMINATION NUMBER -->
+<div class="input-group">
+<label>Nomination Number</label>
+<input type="text" id="nominationNumber" placeholder="Enter Nomination Number" required>
+</div>
+
+
+<!-- FULL NAME -->
+ <div class="input-row">
+<div class="input-group">
+<label for="fullName">Full Name</label>
+<input type="text" id="fullName" placeholder="Enter your name" required>
+</div>
+
+<!-- GENDER -->
+<div class="input-group">
+<label for="gender">Gender</label>
+<input type="text" id="voterGender" readonly placeholder="Your Gender" required>
+
+</div>
+ </div>
+
+<!-- SERIAL + PARTY -->
+<div class="input-row">
+
+<div class="input-group">
+<label>Candidate Serial No</label>
+<input type="number" id="candidateSerial" placeholder="Enter Serial No" required>
+</div>
+
+<div class="input-group">
+<label>Party Name</label>
+<input type="text" id="party" readonly placeholder="Your Party" required>
+
+</div>
+
+</div>
+
+<!-- CONSTITUENCY + AREA -->
+<div class="input-row">
+
+<div class="input-group">
+<label>Constituency</label>
+<input type="text" id="constituency" placeholder="Enter Constituency" required>
+</div>
+
+<div class="input-group">
+<label>Area</label>
+<input type="text" id="voterArea" placeholder="Enter Area" required>
+</div>
+
+</div>
+
+<!-- MOBILE -->
+<div class="input-group">
+
+<label for="mobile">Mobile Number</label>
+
+<div class="mobile-container">
+
+<select id="countryCode" class="country-code">
+<option value="+91">+91</option>
+<option value="+1">+1</option>
+<option value="+44">+44</option>
+</select>
+<input type="tel" id="mobile" placeholder="Enter mobile number" maxlength="10" required>
+
+</div>
+
+</div>
+
+<!-- PASSWORD -->
+<div class="input-row">
+
+<div class="input-group">
+
+<div class="password-container">
+
+<label>Create Password</label>
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<i class="fa-solid fa-eye-slash toggle-password"
+onclick="togglePassword('password', this)"></i>
+
+</div>
+
+</div>
+
+<div class="input-group">
+
+<div class="password-container">
+
+<label>Confirm Password</label>
+
+<input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+<i class="fa-solid fa-eye-slash toggle-password"
+onclick="togglePassword('confirmPassword', this)"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SYMBOL -->
+<div class="input-group">
+
+<label>Upload Election Symbol</label>
+
+<input type="file" id="userImage" accept="image/*" required>
+
+</div>
+
+<!-- NOMINATION LETTER -->
+<div class="input-group">
+
+<label>Upload Party Nomination Letter</label>
+
+<input type="file" id="nominationFile" accept="image/*,.pdf">
+
+</div>
+<button type="button" id="sendRegisterOtpBtn">Send OTP</button>
+</form>
+<p id="registerMessage" style="
+color:#00ffcc;
+text-align:center;
+margin-top:15px;
+font-weight:bold;
+"></p>
+
+<p class="footer-text">
+
+Already a user?
+<a href="login.html">Login here</a>
+
+</p>
+
+</div>
+
+<!-- OTP SECTION -->
+
+<div id="otp-section" style="display:none;">
+
+<h1>OTP Verification</h1>
+
+<p style="text-align:center;color:#ffffff;margin-bottom:20px;">
+Verification code sent to your mobile
+</p>
+
+<!-- TIMER -->
+<p id="otpTimer" style="text-align:center; color:#00ffcc; font-weight:bold;">
+1:00
+</p>
+
+<div class="input-group">
+<label>Enter 4 Digit OTP</label>
+<input type="text" id="otpInput" maxlength="4" placeholder="0 0 0 0" class="otp-box">
+</div>
+
+<button type="button" id="verifyBtn">Verify & Create Account</button>
+
+<!-- RESEND BUTTON -->
+<button type="button" id="resendOtpBtn" style="display:none;">
+Resend OTP
+</button>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote Submitted</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="success-page">
+
+<div class="success-wrapper">
+    <div class="success-card">
+        <h1>Thank You!</h1>
+        <p class="success-msg">Your vote has been successfully submitted.</p>
+
+        <div class="proof-box">
+            <p><strong>Name:</strong> <span id="proofName"></span></p>
+            <p><strong>Transaction ID:</strong> <span id="proofTxn"></span></p>
+            <p><strong>Date & Time:</strong> <span id="proofDate"></span></p>
+        </div>
+
+        <p class="note-text">
+            This is your official voting confirmation receipt.
+            Please keep this for your reference.
+        </p>
+
+        <button onclick="goHome()">Back to Home</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

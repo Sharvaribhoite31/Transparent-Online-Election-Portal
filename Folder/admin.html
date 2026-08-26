@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Candidate Approval</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-container" style="max-width:800px; margin-top:40px;">
+        <h1>Admin Panel - Candidate Approval</h1>
+
+        <!-- Admin Login Section -->
+        <div id="admin-login-section">
+            <div class="input-group">
+                <label for="adminMobile">Mobile No</label>
+                <input type="tel" id="adminMobile" placeholder="Enter Mobile No" maxlength="10">
+            </div>
+            <div class="input-group">
+    <div class="password-container">
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" placeholder="Enter Password">
+        
+        <i class="fa-solid fa-eye-slash toggle-password"
+           onclick="togglePassword('adminPassword', this)"></i>
+    </div>
+</div>
+            <button id="adminLoginBtn">Login</button>
+        </div>
+
+        <!-- Pending Candidates Section -->
+        <div id="pending-section" style="display:none; margin-top:30px;">
+           <h2 class="pending-title">Pending Candidates</h2>
+            <div id="pending-container">
+                <!-- Candidate cards will be dynamically added here -->
+            </div>
+            <!-- Start Voting Button (Login नंतरच दिसेल) -->
+    <div style="text-align:center; margin-top:30px;">
+        <button id="startVotingBtn">
+            Start Voting
+        </button>
+    </div>
+            <button id="logoutAdmin" style="margin-top:20px;">Logout</button>
+        </div>
+        
+        <div id="nomination-view-section" style="display:none; margin-top:20px;">
+    
+    <div class="nomination-header">
+        <i id="nominationBackBtn" class="fa-solid fa-arrow-left nomination-back-icon"></i>
+        <h2 id="docTitle" class="doc-title">Nomination Letter</h2>
+    </div>
+
+    <div id="nomination-content">
+        </div>
+
+</div>
+    </div>
+           
+    <script src="script.js"></script>
+</body>
+</html>

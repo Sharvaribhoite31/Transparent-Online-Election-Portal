@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-wrapper">
+        <div class="profile-box">
+            <div id="voterView">
+                <h1 class="main-title">Your Profile</h1>
+                <hr class="title-line">
+                <div class="profile-photo">
+                    <img id="displayPhoto" src="https://via.placeholder.com/150" alt="Profile Photo">
+                </div>
+                <div class="profile-info">
+                    <div class="info-row">
+                        <div class="info-group">
+                            <label>Full Name</label>
+                            <span id="displayName">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-group">
+                            <label>Voter ID</label>
+                            <span id="displayVoterId">Loading...</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Mobile Number</label>
+                            <span id="displayMobile">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-group">
+                            <label>Gender</label>
+                            <span id="displayGender">Loading...</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Role</label>
+                            <span id="displayRole">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-group">
+                            <label>Address</label>
+                            <span id="displayAddress">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="candidateGreetingView" class="greeting-container" style="display: none;">
+                <h1 class="main-title">Welcome!</h1>
+                <hr class="title-line">
+                <p class="role-highlight">You are a candidate of voting.</p>
+                
+
+             <div class="celebration-gif">
+             <img src="Celebration.gif" alt="Celebration">
+            </div>
+                <div class="greeting-card">
+                    <p class="greeting-text">
+                        "Leaders are not born, they are made by the trust of the people. 
+                        Wishing you the very best for your journey in this election. 
+                        May your vision inspire many!"
+                    </p>
+                </div>
+            </div>
+
+            <button id="myVoteStatus">Vote</button>
+        </div>
+
+        <div class="right-side">
+            <h1 class="main-title">Available Parties</h1>
+            <hr class="title-line">
+            <div id="groups-container">
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

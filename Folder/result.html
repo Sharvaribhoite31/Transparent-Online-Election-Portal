@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Election Results</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="result-page">
+
+<h1 class="main-result-title">🏆 FINAL ELECTION RESULTS 🏆</h1>
+
+<div id="results-container"></div>
+
+<script src="script.js"></script>
+
+<script >
+
+let candidates = [];
+
+// collect candidates
+for (let key in localStorage) {
+
+    if (key.startsWith("user_")) {
+
+        let user = JSON.parse(localStorage.getItem(key));
+
+        if (user.role === "group" && user.isApproved === true) {
+
+            candidates.push({
+                name: user.name,
+                party: user.party,
+                area: user.address,
+                votes: user.voteCount || 0,
+                image: user.image
+            });
+
+        }
+
+    }
+
+}
+
+// Area wise grouping
+let areaMap = {};
+
+candidates.forEach(c => {
+
+    if(!areaMap[c.area]){
+        areaMap[c.area] = [];
+    }
+
+    areaMap[c.area].push(c);
+
+});
+
+let container = document.getElementById("results-container");
+
+// create result cards
+Object.keys(areaMap).forEach(area => {
+
+    let group = areaMap[area];
+
+    let winner = group.reduce((a,b) => a.votes > b.votes ? a : b);
+
+    let card = document.createElement("div");
+    card.className = "area-result-card";
+
+    card.innerHTML = `
+    <div class="winner-label">🏆 WINNER 🏆</div>
+    <h2 class="area-name">${area}</h2>
+    <img class="symbol" src="${winner.image}">
+    <div class="candidate-name">${winner.name}</div>
+    <div class="party-name">${winner.party}</div>
+    <div class="vote-count">Votes : ${winner.votes}</div>
+    `;
+
+    container.appendChild(card);
+
+});
+
+</script>
+
+</body>
+</html>

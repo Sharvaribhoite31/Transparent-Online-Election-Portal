@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+</head>
+<body>
+    <div class="header-wrapper">
+    <div class="eci-container">
+
+    <h1 class="marathi-title">भारत निवडणूक आयोग</h1>
+
+    <div class="middle-row">
+        <img src="gov.png" class="eci-logo">
+
+        <div class="english-wrapper">
+            <div class="golden-line"></div>
+            <h2 class="english-title">
+                ELECTION COMMISSION OF INDIA
+            </h2>
+        </div>
+
+        <img src="indian flag.png" class="eci-logo">
+    </div>
+
+</div>
+  <hr class="title-line">
+</div>
+    <div class="form-container">
+        <div id="login-section">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="loginMobile">Mobile Number</label>
+                    <div class="mobile-container">
+                        <select id="countryCode" class="country-code">
+                            <option value="+91">+91</option>
+                        </select>
+                        <input type="tel" id="loginMobile" placeholder="Enter mobile number" maxlength="10" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="password-container1">
+                    <label for="loginPass">Password</label>
+                    <input type="password" id="loginPass" placeholder="Enter Password">
+    <i class="fa-solid fa-eye-slash toggle-password" onclick="togglePassword('loginPass', this)"></i>
+                <a href="reset.html" id="forgotPassLink" class="hint">Forgot Password?</a>
+                </div>
+                </div>
+            
+
+                <button type="submit">Login</button>
+            </form>
+            <p class="footer-text">New user?
+                
+<a href="#" onclick="openRegistration()">Register Now</a>
+            </p>
+        </div>
+
+        <div id="forgot-section" style="display: none;">
+            <h2>Reset Password</h2>
+            <p class="info-text">Enter your mobile number to receive an OTP.</p>
+            <div class="input-group">
+                <input type="tel" id="resetMobile" placeholder="Enter mobile number" maxlength="10">
+            </div>
+            <button type="button" id="sendResetOtp">Send OTP</button>
+            <p class="footer-text"><a href="#" id="backToLogin">Back to Login</a></p>
+        </div>
+
+        <p id="message"></p>
+    </div>
+     
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,939 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(#FDFBD4);
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 0;
+}
+.eci-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Marathi Small */
+.marathi-title {
+    margin-bottom: 0%;
+    font-size: 30px;
+    margin: 0;
+    color: #000080;
+    font-family: 'Mangal', sans-serif;
+}
+
+/* Middle Row */
+.middle-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 0px;
+}
+
+/* English Wrapper */
+.english-wrapper {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Golden Line same as English width */
+.golden-line {
+    height: 3px;
+    background: linear-gradient(to right, #b8860b, #ffd700, #b8860b);
+    margin-top: 0pxs;
+    margin-bottom: 6px;
+}
+
+/* English Big */
+.english-title {
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Times New Roman', serif;
+    color: #444;
+    margin: 0;
+}
+
+/* Make line exact English width */
+.english-wrapper {
+    width: fit-content;
+}
+
+.golden-line {
+    width: 100%;
+}
+
+/* Logos */
+.eci-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}s
+.main-title {
+    font-family: 'monospace';
+    font-size: 42px;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.header-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title-line {
+    height: 1px;
+    background-color: #090303;
+    width: 100%;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.form-container {
+    margin-top: 20px;
+    background: linear-gradient(#FF1D58);
+    height: auto;
+    padding: 30px 40px;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+     font-family: 'Georgia', serif;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+#voterId {
+    text-transform: uppercase;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="file"] {
+    padding: 7px;
+    background-color: #f8f9fa;
+}
+
+.mobile-container {
+    display: flex;
+    gap: 10px;
+}
+
+.country-code {
+    width: 85px;
+}
+
+.otp-box {
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 8px;
+    font-weight: bold;
+    border: 2px solid #28a745;
+}
+
+/* --- बटण स्टाईलिंग अपडेट --- */
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* उजव्या बाजूचे Vote बटण - नेहमी हिरवे */
+.vote-btn {
+    width: 150px;
+    background-color: #28a745 !important;
+    color: white !important;
+    font-weight: bold;
+    border:2px solid  #000000 ;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+
+    padding: 12px 0;   /* ← Top & Bottom space inside button */
+}
+
+.vote-btn:disabled {
+    background-color: #28a745 !important;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* डाव्या बाजूचे बटण - मतदान केल्यावर लाल होईल */
+#myVoteStatus:disabled {
+    background-color: red !important;
+    color: white !important;
+    cursor: not-allowed;
+}
+
+/* --- इतर स्टाईल्स --- */
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-text a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#forgotPassLink {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+#forgotPassLink:hover {
+    color: #28a745;
+    text-decoration: underline;
+}
+
+.profile-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 20vh;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.profile-box {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    width: 30%;
+    background: #ffffff;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.profile-box .main-title {
+    font-size: 40px !important;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.right-side {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 50%;
+    background-color: #F4A460;
+    padding: 20px;
+    border: 2px solid #000;
+    
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000000;
+    display: block;
+    margin: 10px auto 20px auto;
+}
+
+.info-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.info-row .info-group {
+    flex: 1;
+    text-align: left;
+}
+
+.profile-box label {
+    color: #1a1a1a !important;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.profile-box span {
+    color: #444444 !important;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#groups-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.party-card {
+    margin-left:10px;
+    margin-right: 10px;
+    background: #ffffff;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.greeting-container {
+    text-align: center;
+    padding: 10px;
+    
+    
+}
+
+.role-highlight {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffd700;
+    margin: 15px 0;
+}
+
+.greeting-card {
+    margin-bottom: 20px;
+    background: #FDFBD4 ;
+    padding: 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.greeting-text {
+    font-size: 14px;
+    color:#FF1D58;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.6;
+}
+.celebration-gif {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.celebration-gif img {
+    width: 160px; 
+    margin-top: 20px;  /* size adjust करू शकतोस */
+    height: 160px;
+}
+
+/* Outer Big Circle */
+.circle-box {
+    width: 160px;       /* Circle मोठा */
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D5F3D8;
+}
+
+/* Inner Image Small */
+.inner-image {
+    width: 120px;       /* Image लहान */
+    height: 120px;
+    object-fit: contain;
+}
+.candidate-name {
+    margin: 8px 0;
+    font-size: 20px;      /* Size increase */
+    font-weight: bold;
+    color: #000;
+}
+.vote-count {
+    font-size: 22px;
+    font-family: 'Georgia', serif;
+    font-weight: 600;
+}
+
+.vote-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0613cd;   /* Green highlight */
+}
+.party-name {
+    margin: 0;
+    font-size: 26px;               /* Increase size */
+    font-weight: bold;
+    color: #d30808;                /* Change color (Blue example) */
+    font-family: 'Georgia', serif; /* Change font */
+}
+.profile-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;   /* Full height घेईल */
+}
+
+.profile-box {
+    width: 40%;
+    background: #ffffff;
+    padding: 40px;
+    border-right: 4px solid black;   /* ← ही vertical line आहे */
+    box-sizing: border-box;
+}
+
+.right-side {
+    width: 60%;
+    background-color: #F4A460;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.rules-page {
+    width: 100%;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #444, #000000);
+    min-height: 100vh;
+    color: white;
+    
+    
+}
+
+.rules-container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.rules-main-heading {
+    text-shadow: 2px 2px 4px #000000; /* Black shadow */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.rules-card {
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border:2px solid #FFFFFF;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.rules-card h2 {
+     text-shadow: 2px 2px 4px #000000; /* Black shadow */
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.rules-card ul li,
+.rules-card ol li {
+    text-shadow: 2px 2px 4px black; /* Black shadow */
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.notice-card {
+    text-shadow: 2px 2px 4px black; /* Black shadow */
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(255,0,0,0.2);
+}
+
+.countdown-card {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#timer {
+    font-size: 26px;
+    color: #00ffcc;
+    margin-top: 10px;
+}
+
+.agree-card {
+    text-align: center #000000;
+    font-weight: bold;
+}
+
+#proceedBtn {
+    padding: 12px 25px;
+    background:#218838;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#proceedBtn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+/* Agreement row perfect center */
+.agree-card {
+    text-align: center;
+}
+
+/* Wrap checkbox + text properly */
+.agree-card label {
+    color: white; /* Text white */
+    text-shadow: 2px 2px 4px black; /* Black shadow */
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Perfect vertical adjust */
+.agree-card input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;              /* default margin remove */
+    transform: translateY(3px);  /* tiny vertical adjust */
+}
+/* ========================= */
+/* Vote Success Page Styling */
+/* ========================= */
+
+
+
+.success-card {
+    background: #ffffff;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.success-card h1 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.success-msg {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.proof-box {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.proof-box p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.note-text {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+/* ================= VOTE SUCCESS GLASS EFFECT ================= */
+
+.success-page {
+    margin: 0;
+    padding: 0;
+    background: url('wallpaper1.jpg') no-repeat center center/cover;
+    height: 100vh;
+}
+
+/* Center layout */
+.success-page .success-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Glass Card */
+.success-page .success-card {
+    width: 420px;
+    padding: 30px;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+}
+
+/* Heading */
+.success-page .success-card h1 {
+    color: #002244;
+    margin-bottom: 10px;
+}
+
+/* Message */
+.success-page .success-msg {
+    color: #111;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Proof Box */
+.success-page .proof-box {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.success-page .proof-box p {
+    color: #000;
+    font-weight: 500;
+    margin: 6px 0;
+}
+
+/* Note text */
+.success-page .note-text {
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.success-page button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #002244;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.success-page button:hover {
+    background: #004488;
+}
+
+/* ===== FINAL SUCCESS PAGE BACKGROUND ===== */
+
+body.success-page {
+    background: url("wallpaper1.jpg") center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.success-page .success-wrapper {
+    background: transparent;
+}
+
+/* Glass Effect Card */
+.success-page .success-card {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 45px;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(+40%);
+    cursor: pointer;
+}
+.password-container1 {
+    position: relative;
+}
+
+.password-container1 input {
+    padding-right: 45px;
+}
+
+.password-container1 .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-45%);
+    cursor: pointer;
+}
+#nomination-view-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f4f6f9;
+    display: none;
+    padding: 40px;
+    overflow: auto;
+}
+
+.nomination-back-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #2c3e50;
+    transition: 0.3s;
+}
+
+.nomination-back-icon:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+#nomination-content img {
+    display: block;
+    max-width: 80%;
+    margin: 80px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.doc-title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 42px;   /* मोठा size */
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #1a237e;
+}
+
+#nomination-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#nomination-content img {
+    max-width: 75%;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.pending-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #ffffff;  /* White text */
+
+    /* Black outline around letters */
+    -webkit-text-stroke: 1px black;
+
+    /* Light black shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+
+/* ================= ADMIN LOGIN SIMPLE GOV STYLE ================= */
+
+#admin-login-section {
+    margin-top: 10px;
+}
+
+#admin-login-section .input-group {
+    margin-bottom: 20px;
+}
+
+#admin-login-section input {
+    padding: 12px;
+    font-size: 15px;
+}
+
+/* Captcha Box */
+#captchaText {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    background: #f5f5f5;
+    padding: 8px 15px;
+    border: 1px solid #000;
+}
+
+#captchaInput {
+    margin-top: 8px;
+}
+
+/* Buttons Same Like Screenshot */
+#adminLoginBtn {
+    background: #5cb85c;
+}
+
+#adminLoginBtn:hover {
+    background: #4cae4c;
+}
+
+button[onclick="showForgetPassword()"] {
+    background: #428bca;
+}
+
+button[onclick="showForgetPassword()"]:hover {
+    background: #3071a9;
+}
+
+button[onclick="showForgetUsername()"] {
+    background: #d9534f;
+}
+
+button[onclick="showForgetUsername()"]:hover {
+    background: #c9302c;
+}
+
+/* Forget Sections */
+#forget-username-section,
+#forget-password-section {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+#forget-username-section h3,
+#forget-password-section h3 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+#captchaError {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ===== RESULT PAGE ===== */
+
+#results-container {
+    display: flex;
+    flex-wrap: wrap;       /* Cards wrap होतील automatically */
+    justify-content: center; /* Row मध्ये cards center मध्ये */
+    gap: 20px;             /* Cards मध्ये spacing */
+}
+
+.result-page{
+    background: url("https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif");
+    background-size: cover;        /* full screen fill */
+    background-position: center;
+    background-repeat: no-repeat;  /* repeat नको असेल तर */
+    
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+.main-result-title{
+font-size:40px;
+margin-top:40px;
+}
+
+.area-result-card {
+    background: white;
+    color: black;
+    width: 250px;          /* Width कमी करली, row मध्ये बसवण्यासाठी */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.winner-label{
+font-weight:bold;
+color:green;
+margin-bottom:10px;
+}
+
+.symbol{
+width:80px;
+height:80px;
+border-radius:50%;
+}
+
+.celebration-gif{
+width:100%;
+margin-top:10px;
+border-radius:10px;
+}

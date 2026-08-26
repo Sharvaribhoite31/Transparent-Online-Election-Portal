@@ -1,0 +1,47 @@
+ss<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Reset Password</h1>
+        
+        <div id="step-mobile">
+            <div class="input-group">
+                <label for="resetMobile">Registered Mobile Number</label>
+                <input type="tel" id="resetMobile" placeholder="Enter 10 digit mobile" maxlength="10">
+            </div>
+            <button type="button" id="sendResetOtpBtn">Send OTP</button>
+        </div>
+
+        <div id="step-otp" style="display: none;">
+            <p style="text-align: center; color: white;">OTP sent to your mobile</p>
+            <div class="input-group">
+                <label>Enter 4-Digit OTP</label>
+                <input type="text" id="resetOtpInput" maxlength="4" placeholder="0 0 0 0" class="otp-box">
+            </div>
+            <button type="button" id="verifyResetOtpBtn">Verify OTP</button>
+        </div>
+
+        <div id="step-password" style="display: none;">
+            <div class="input-group">
+                <label>New Password</label>
+                <input type="password" id="newPass" placeholder="Enter new password">
+            </div>
+            <div class="input-group">
+                <label>Confirm New Password</label>
+                <input type="password" id="confirmNewPass" placeholder="Confirm new password">
+            </div>
+            <button type="button" id="finalResetBtn">Reset Password</button>
+        </div>
+
+        <p class="footer-text"><a href="login.html">Back to Login</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

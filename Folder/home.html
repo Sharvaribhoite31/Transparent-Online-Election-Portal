@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Rules</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="rules-page">
+
+    <div class="rules-container">
+
+        <h1 class="rules-main-heading">" Your Vote, Your Voice! " </h1>
+
+        <!-- A. Voting Rules -->
+        <div class="rules-card">
+            <h2>A. Voting Rules</h2>
+            <ul>
+                <li>Voting is allowed only once per voter.</li>
+                <li>Valid mobile number verification is mandatory.</li>
+                <li>Incorrect information may cancel your vote.</li>
+                <li>Vote once submitted cannot be changed.</li>
+                <li>Maintain election confidentiality.</li>
+            </ul>
+        </div>
+
+        <!-- B. Important Notice -->
+        <div class="rules-card notice-card">
+            <h2>B. Important Notice</h2>
+            <p>⚠ Please verify your identity before voting.</p>
+            <p>⚠ Multiple attempts may block your account.</p>
+        </div>
+
+        <!-- C. Voting Process -->
+        <div class="rules-card">
+            <h2>C. Voting Process</h2>
+            <ol>
+                <li>If not registered, register first.</li>
+                <li>Login using your credentials.</li>
+                <li>Verify OTP sent to your mobile.</li>
+                <li>Select your preferred candidate.</li>
+                <li>Click Vote and confirm.</li>
+            </ol>
+        </div>
+
+        <!-- D. Countdown -->
+        <div class="rules-card countdown-card">
+            <h2>D. Voting Ends In</h2>
+            <div id="timer"></div>
+        </div>
+
+        <!-- E. Agreement -->
+        <div class="rules-card agree-card">
+            <input type="checkbox" id="agree">
+            <label for="agree">I Agree to the Rules & Regulations</label>
+            <br><br>
+            <button id="proceedBtn" disabled>Proceed to Vote</button>
+        </div>
+
+    </div>
+
+</div>
+ <script src="script.js"></script>
+</body>
+</html>
